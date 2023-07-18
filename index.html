@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matrices Operation</title>
+  <link rel="icon" href="matrix.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <h1>MATRIX OPERATION</h1>
+
+  <div>
+    <h2>Choose Operation</h2>
+    <input type="radio" name="operation" value="add">
+    <label>Matrix Addition</label>
+    <input type="radio" name="operation" value="subtract">
+    <label>Matrix Subtraction</label>
+    <input type="radio" name="operation" value="multiply">
+    <label>Matrix Multiplication</label>
+    <input type="radio" name="operation" value="inverse">
+    <label>Matrix Inverse</label>
+    <br>
+  </div>
+  
+
+  <div>
+    <h2>Select Order</h2>
+    <input type="radio" name="order" value="2x2">
+    <label>2 X 2</label><br>
+    <input type="radio" name="order" value="3x3">
+    <label>3 X 3</label>
+    <br><br>
+    <button onclick="matOrder()">Select</button>
+  </div>
+
+  <div class="mat2x2">
+     <h2>Put your 2x2 Matrix</h2>
+
+    <div style="display: flex; justify-content: center;">
+      <div class="space">
+        <h2>Matrix A</h2>
+        <div class="grid-container">
+          <input type="number" placeholder="a11" id="a11">
+          <input type="number" placeholder="a12" id="a12">
+          <input type="number" placeholder="a21" id="a21">
+          <input type="number" placeholder="a22" id="a22">
+        </div>
+      </div>
+
+      <div>
+        <h2>Matrix B</h2>
+        <div class="grid-container">
+          <input type="number" placeholder="b11" id="b11">
+          <input type="number" placeholder="b12" id="b12">
+          <input type="number" placeholder="b21" id="b21">
+          <input type="number" placeholder="b22" id="b22">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="btn-pos">
+      <button id="add2x2" onclick="matAdd()">Find A+B</button>
+      <button id="sub2x2" onclick="matSub()">Find A-B</button>
+      <button id="mul2x2" onclick="matMul()">Find AB</button>
+
+    </div>
+  </div>
+  <br><br>
+   
+  <div class="ans2x2">
+      <h2>Answer</h2>
+
+      <div class="grid2-container">
+        <!-- <mo>(</mo> -->
+        <h4 id="r11"></h4>
+        <h4 id="r12"></h4>
+        <h4 id="r21"></h4>
+        <h4 id="r22"></h4>
+      </div>
+
+    </div>
+
+    <div class="inverse2x2">
+      <h2>Inverse Matrix</h2>
+      <h3>Put a 2X2 Matrix</h3>
+      <div class="grid-container">
+          <input type="number" placeholder="a11" id="ai11">
+          <input type="number" placeholder="a12" id="ai12">
+          <input type="number" placeholder="a21" id="ai21">
+          <input type="number" placeholder="a22" id="ai22">
+      </div>
+
+      <br>
+
+      <button id="btn2" onclick="inverse_mat()">Get Inverse Matrix</button>
+
+      <br><br>
+
+      <h2>Inverse Matrix</h2>
+
+      <div style="display: flex; justify-content: center;">
+        <div style="margin-right: 10px; background:  LightCyan;">
+          <br><br>
+          <span id="one"></span>
+          <hr style="width: 1cm; margin: 0px;">
+          <span id="det"></span>
+        </div>
+      
+        <span class="grid3-container">
+          <h4 id="rs11"></h4>
+          <h4 id="rs12"></h4>
+          <h4 id="rs21"></h4>
+          <h4 id="rs22"></h4>
+        </span>
+      
+      </div>
+    </div>
+
+    <div class="op3x3">
+      <img src="uc2.webp" width="40%">
+    </div>
+
+  <br><br>  <br><br>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
